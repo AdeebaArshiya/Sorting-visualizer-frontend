@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-3 mb-2 bg-dark text-white">
+    <header class="container-fluid">
+        <h1 class="text-center mb-4">Sorting Visualizer</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarControls">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarControls">
+                    <div class="d-flex flex-column flex-md-row w-100 justify-content-between align-items-center">
+                        <div class="d-flex flex-column flex-md-row align-items-center mb-2 mb-md-0">
+                            <div class="mx-2">
+                                <button type="button" class="btn btn-outline-success btn-dark newArray">New Array</button>
+                            </div>
+                            <div class="mx-2">
+                                <label for="arr_sz" class="form-label">Size</label>
+                                <input id="arr_sz" type="number" class="form-control" min="5" max="100" value="30" style="width: 80px;">
+                            </div>
+                            <div class="mx-2">
+                                <label for="speed_input" class="form-label">Speed</label>
+                                <select id="speed_input" class="form-select">
+                                    <option value="20">Slow</option>
+                                    <option value="70" selected>Medium</option>
+                                    <option value="150">Fast</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-end">
+                            <button type="button" class="btn btn-outline-primary btn-dark bubbleSort">Bubble</button>
+                            <button type="button" class="btn btn-outline-primary btn-dark selectionSort">Selection</button>
+                            <button type="button" class="btn btn-outline-primary btn-dark insertionSort">Insertion</button>
+                            <button type="button" class="btn btn-outline-primary btn-dark quickSort">Quick</button>
+                            <button type="button" class="btn btn-outline-primary btn-dark mergeSort">Merge</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid">
+        <div class="d-flex justify-content-center">
+            <div id="bars" class="d-flex flex-row align-items-end bars-container"></div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    
+    <!-- Load scripts in proper order -->
+    <script src="logic file/sort.js"></script>
+    <script src="logic file/bubblesort.js"></script>
+    <script src="logic file/selectionSort.js"></script>
+    <script src="logic file/insertion.js"></script>
+    <script src="logic file/quick.js"></script>
+    <script src="logic file/merge.js"></script>
+</body>
+</html>
